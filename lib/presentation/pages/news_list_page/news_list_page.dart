@@ -43,12 +43,12 @@ class _NewsListPageState extends State<NewsListPage> {
         padding: EdgeInsets.symmetric(vertical: 8),
         itemCount: _articles.length,
         itemBuilder: (context, index) {
-          final _article = _articles[index];
+          final article = _articles[index];
           return NewsCard(
-            article: _article,
+            article: article,
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => NewsDetailPage(newsArticle: _article),
+                builder: (context) => NewsDetailPage(newsArticle: article),
               ),
             ),
           );
