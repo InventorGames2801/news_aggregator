@@ -6,4 +6,5 @@ final themeDark = ThemeData(
     bodyMedium: TextStyle(fontSize: 20),
     bodyLarge: TextStyle(fontSize: 22),
   ),
+  appBarTheme: AppBarThemeData(backgroundColor: Colors.blueGrey),
 );
