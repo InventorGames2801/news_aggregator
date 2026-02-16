@@ -13,6 +13,7 @@ class NewsDetailPage extends StatelessWidget {
       body: Column(
         children: [
           Text('Тут будет дополнительная информация по ${newsArticle.title}'),
+          Image.asset('images/doc.png', height: 80),
         ],
       ),
     );
