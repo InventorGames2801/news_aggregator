@@ -25,6 +25,7 @@ dependencies:
   dartz: ^0.10.1
   flutter_dotenv: ^6.0.0
   logger: ^2.6.2
+  flutter_secure_storage: ^10.0.0
   
   
   
@@ -37,6 +38,7 @@ dev_dependencies:
   hive_ce_generator: ^1.9.5
   mockito: ^5.4.4
   bloc_test: ^10.0.0
+
   
 
 flutter:
