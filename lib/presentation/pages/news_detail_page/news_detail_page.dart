@@ -14,7 +14,9 @@ class NewsDetailPage extends StatelessWidget {
         children: [
           Text('Тут будет дополнительная информация по ${newsArticle.title}'),
           Image.asset('images/doc.png', height: 80),
-          Image.network('https://dummyjson.com/image/200x200', height: 80),
+          Image.network('https://dummyjson.com/image/500x200', height: 80),
+          Text('data'),
+          Image.network('https://dummyjson.com/image/300x200', height: 80),
         ],
       ),
     );
