@@ -7,10 +7,11 @@ class NewsListPage extends StatefulWidget {
   const NewsListPage({super.key});
 
   @override
-  State<NewsListPage> createState() => _NewsListPageState();
+  State<NewsListPage> createState() {
+    debugPrint('createState()');
+    return _NewsListPageState();
+  }
 }
-
-class Aclass {}
 
 class _NewsListPageState extends State<NewsListPage> {
   // Внутри класса _NewsListPageState добавьте этот список:
@@ -39,6 +40,12 @@ class _NewsListPageState extends State<NewsListPage> {
   void initState() {
     debugPrint('initState()');
     super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    debugPrint('didChangeDependencies');
+    super.didChangeDependencies();
   }
 
   @override

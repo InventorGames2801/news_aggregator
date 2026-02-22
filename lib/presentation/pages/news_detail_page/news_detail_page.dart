@@ -39,7 +39,6 @@ class _SecureDataControllerState extends State<SecureDataController> {
   @override
   void initState() {
     storage = FlutterSecureStorage();
-    print('object');
     super.initState();
   }
 
