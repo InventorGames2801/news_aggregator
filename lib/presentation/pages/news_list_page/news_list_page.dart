@@ -36,6 +36,12 @@ class _NewsListPageState extends State<NewsListPage> {
   ];
 
   @override
+  void initState() {
+    debugPrint('initState()');
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Новости')),
