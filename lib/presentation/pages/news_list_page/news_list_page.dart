@@ -44,12 +44,13 @@ class _NewsListPageState extends State<NewsListPage> {
 
   @override
   void didChangeDependencies() {
-    debugPrint('didChangeDependencies');
+    debugPrint('didChangeDependencies()');
     super.didChangeDependencies();
   }
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('build() рисуем интерфейс');
     return Scaffold(
       appBar: AppBar(title: Text('Новости')),
       body: ListView.builder(
