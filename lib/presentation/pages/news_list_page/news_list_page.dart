@@ -49,6 +49,12 @@ class _NewsListPageState extends State<NewsListPage> {
   }
 
   @override
+  void dispose() {
+    debugPrint('dispose()');
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     debugPrint('build() рисуем интерфейс');
     return Scaffold(
