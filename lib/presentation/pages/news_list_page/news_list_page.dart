@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:my_news/domain/entities/news_article.dart';
 import 'package:my_news/presentation/pages/news_detail_page/news_detail_page.dart';
-import 'package:my_news/presentation/widgets/news_card.dart';
 
 class NewsListPage extends StatefulWidget {
   const NewsListPage({super.key});
 
   @override
   State<NewsListPage> createState() {
-    debugPrint('createState()');
     return _NewsListPageState();
   }
 }
 
 class _NewsListPageState extends State<NewsListPage> {
-  // Внутри класса _NewsListPageState добавьте этот список:
   final List<NewsArticle> _articles = [
     NewsArticle(
       id: '1',
@@ -37,26 +34,7 @@ class _NewsListPageState extends State<NewsListPage> {
   ];
 
   @override
-  void initState() {
-    debugPrint('initState()');
-    super.initState();
-  }
-
-  @override
-  void didChangeDependencies() {
-    debugPrint('didChangeDependencies()');
-    super.didChangeDependencies();
-  }
-
-  @override
-  void dispose() {
-    debugPrint('dispose()');
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    debugPrint('build() рисуем интерфейс');
     return Scaffold(
       appBar: AppBar(title: Text('Новости')),
       body: ListView.builder(
@@ -75,5 +53,16 @@ class _NewsListPageState extends State<NewsListPage> {
         },
       ),
     );
+  }
+}
+
+class NewsCard extends StatelessWidget {
+  final NewsArticle article;
+  final VoidCallback onTap;
+  const NewsCard({super.key, required this.onTap, required this.article});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
