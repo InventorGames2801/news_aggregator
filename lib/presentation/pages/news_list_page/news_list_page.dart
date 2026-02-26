@@ -63,6 +63,32 @@ class NewsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+    return Card(
+      elevation: 0,
+      color: colorScheme.surfaceContainerLow,
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadiusGeometry.circular(24),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.network(
+              article.imageUrl,
+              height: 200,
+              color: colorScheme.onSurfaceVariant,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
+
+// ПО СТИЛЯМ СЮДА https://gemini.google.com/app/c5d91601735b3c0f
+// ПО НАРАБОТКЕ СЮДА https://aistudio.google.com/prompts/1nprY3VD79Z1F1XPbNX-GrKpYEmStYPA8
